@@ -133,7 +133,10 @@ nav .menu-action {
     width: 100%;
     height: 600px;
 }
-
+.abcc{
+    position: fixed;
+    
+}
 .bg {
     position: absolute;
     z-index: -1;
@@ -210,38 +213,47 @@ nav .menu-action {
     flex-wrap: wrap;
     transition: 1s;
     justify-content: center;
+    position: relative;
+    top: 100vh;
+    background-color: white;
+    /* background:linear-gradient(rgb(213, 227, 231) 100%,white 100%,pink);/ */
 }
 
 .card img {
     width: 100%;
     max-width: 300px;
-    min-height: 240px;
-    border: 1px solid gray;
-    border-radius: 5px;
 }
-
+.card img:hover{
+    scale: 1.10;
+}
 .card {
     display: flex column;
-    transition: 0.6s;
+    transition: 1s;
     flex-basis: 20%;
-    align-items: center;
     min-width: 250px;
-    justify-content: left;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 2px 10px 5px rgb(218, 213, 213);
+    background-color: white;
+    /* box-shadow: 0 1px 1px 1px rgb(218, 213, 213); */
+    min-height: 360px;
+    position: relative;
 }
+.card:hover {
+    /* background-color: rgb(183, 183, 184); */
+    box-shadow: 0 2px 10px 5px rgb(218, 213, 213);
 
-.card .name{
+}
+.card .name {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.card .name .fa-heart{
+.card .name .fa-heart {
     font-size: 25px;
 
 }
+
 .card .info2 {
     display: none;
     flex-direction: column;
@@ -252,7 +264,10 @@ nav .menu-action {
 
 .card .info {
     display: block;
-    margin-top: 20px;
+    position: absolute;
+    width: 80%;
+    bottom: 20px;
+    margin-top: 40px;
 }
 
 .card.active {
@@ -274,6 +289,10 @@ nav .menu-action {
     background: #000;
     padding: 10px 5px;
     margin-top: 10px;
+}
+
+.card button:hover {
+    scale: 1.05;
 }
 
 
@@ -415,23 +434,29 @@ nav .menu-action {
         top: 100px;
         left: 10px;
     }
-    .card.active .fa-heart{
+
+    .card.active .fa-heart {
         font-size: 20px;
     }
-    .card.active .info2{
+
+    .card.active .info2 {
         width: 100%;
     }
-    .card.active .review{
-        display: flex ;
+
+    .card.active .review {
+        display: flex;
         justify-content: space-evenly;
     }
-    .card.active h1{
+
+    .card.active h1 {
         font-size: 20px;
     }
-    .card.active p{
+
+    .card.active p {
         font-size: 13px;
     }
-    .card.active h2{
+
+    .card.active h2 {
         font-size: 15px;
     }
 
