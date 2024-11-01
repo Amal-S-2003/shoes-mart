@@ -30,6 +30,10 @@ nav {
     text-transform: uppercase;
     position: absolute;
     color: #fff;
+    /* overflow: hidden; */
+    background: transparent;
+    z-index: 2;
+    top: 0;
 }
 
 nav h1 {
@@ -133,10 +137,7 @@ nav .menu-action {
     width: 100%;
     height: 600px;
 }
-.abcc{
-    position: fixed;
-    
-}
+
 .bg {
     position: absolute;
     z-index: -1;
@@ -205,7 +206,7 @@ nav .menu-action {
 }
 
 /* =======home======= */
- 
+
 .home {
     display: flex;
     padding: 50px 100px;
@@ -213,19 +214,21 @@ nav .menu-action {
     flex-wrap: wrap;
     transition: 1s;
     justify-content: center;
-    position: relative;
-    top: 100vh;
-    background-color: white;
-    /* background:linear-gradient(rgb(213, 227, 231) 100%,white 100%,pink);/ */
+    /* position: relative;
+    top: 100vh; */
+    background: white;
+    /* z-index: 3; */
 }
 
 .card img {
     width: 100%;
     max-width: 300px;
 }
-.card img:hover{
+
+.card img:hover {
     scale: 1.10;
 }
+
 .card {
     display: flex column;
     transition: 1s;
@@ -238,11 +241,13 @@ nav .menu-action {
     min-height: 360px;
     position: relative;
 }
+
 .card:hover {
     /* background-color: rgb(183, 183, 184); */
     box-shadow: 0 2px 10px 5px rgb(218, 213, 213);
 
 }
+
 .card .name {
     display: flex;
     justify-content: space-between;
@@ -252,14 +257,6 @@ nav .menu-action {
 .card .name .fa-heart {
     font-size: 25px;
 
-}
-
-.card .info2 {
-    display: none;
-    flex-direction: column;
-    width: 60%;
-    margin: 10px;
-    gap: 30px;
 }
 
 .card .info {
@@ -295,6 +292,13 @@ nav .menu-action {
     scale: 1.05;
 }
 
+.footer {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    padding: 10px;
+    background: grey;
+}
 
 
 /* tab screen */
@@ -308,13 +312,6 @@ nav .menu-action {
         display: none;
     }
 
-    /* .desc{
-        position: absolute;
-        top: -80px;
-        padding: 0 30px;
-        text-wrap: wrap;
-        left: -100px;
-    } */
     .desc h1 {
         font-size: 30px;
     }
@@ -394,6 +391,10 @@ nav .menu-action {
 
     .menu-action.fa-xmark {
         display: block;
+    }
+
+    .home {
+        top: 800px;
     }
 
     .desc {
